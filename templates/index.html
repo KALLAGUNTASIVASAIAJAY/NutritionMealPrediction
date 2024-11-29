@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dietary Recommendation Form</title>
+    <style>
+        body {
+            background-color: #e6ffe6; /* Light green background */
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #4caf50; /* Green for heading */
+        }
+        input, select {
+            padding: 10px;
+            margin: 10px 0;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4caf50; /* Green for submit button */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Dietary Recommendation Form</h1>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" name="age" required><br>
+
+        <label for="gender">Gender:</label><br>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br>
+
+        <label for="height">Height (cm):</label><br>
+        <input type="text" id="height" name="height" required><br>
+
+        <label for="weight">Weight (kg):</label><br>
+        <input type="text" id="weight" name="weight" required><br>
+
+        <label for="activity_level">Activity Level:</label><br>
+        <select id="activity_level" name="activity_level" required>
+            <option value="sedentary">Sedentary</option>
+            <option value="active">Active</option>
+            <option value="very_active">Very Active</option>
+        </select><br>
+
+        <label for="dietary_preference">Dietary Preference:</label><br>
+        <select id="dietary_preference" name="dietary_preference" required>
+            <option value="omnivore">Omnivore</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+        </select><br>
+
+        <input type="submit" value="Get Recommendation">
+    </form>
+</body>
+</html>
